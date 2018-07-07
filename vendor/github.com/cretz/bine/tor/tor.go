@@ -92,7 +92,7 @@ type StartConf struct {
 	// started.
 	ExtraArgs []string
 
-	// TorrcFile is the torrc file to on start. If empty, a blank torrc is
+	// TorrcFile is the torrc file to set on start. If empty, a blank torrc is
 	// created in the data directory and is used instead.
 	TorrcFile string
 
@@ -207,6 +207,8 @@ func (t *Tor) startProcess(ctx context.Context, conf *StartConf) error {
 			return err
 		}
 		args = append(args, "--ControlPort", "auto", "--ControlPortWriteToFile", controlPortFile.Name())
+	} else {
+		args = append(args, "--ControlPort", strconv.Itoa(conf.ControlPort))
 	}
 	// Start process with the args
 	var processCtx context.Context

@@ -4,34 +4,20 @@
 [[projects]]
   branch = "master"
   name = "github.com/cretz/bine"
-  packages = [
-    "control",
-    "process",
-    "tor",
-    "torutil",
-    "torutil/ed25519",
-    "torutil/ed25519/internal/edwards25519"
-  ]
-  revision = "f33268f0843a1b2b131a4cacf285a7d0a3e138ba"
+  packages = ["control","process","tor","torutil","torutil/ed25519","torutil/ed25519/internal/edwards25519"]
+  revision = "cbd288d20bac758b15b5430aec13ad702f4aab33"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
-  packages = [
-    "ed25519",
-    "ed25519/internal/edwards25519",
-    "sha3"
-  ]
-  revision = "1a580b3eff7814fc9b40602fd35256c63b50f491"
+  packages = ["ed25519","ed25519/internal/edwards25519","sha3"]
+  revision = "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
-  packages = [
-    "internal/socks",
-    "proxy"
-  ]
-  revision = "8e0cdda24ed423affc8f35c241e5e9b16180338e"
+  packages = ["internal/socks","proxy"]
+  revision = "32a936f46389aa10549d60bd7833e54b01685d09"
 
 [solve-meta]
   analyzer-name = "dep"
